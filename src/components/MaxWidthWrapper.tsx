@@ -9,4 +9,4 @@ const MaxWidthWrapper = ({className, children}: {
         </div>
 }
 
-export default MaxWidthWrapper;
+export default MaxWidthWrapper

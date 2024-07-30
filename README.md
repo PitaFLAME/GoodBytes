@@ -1,18 +1,14 @@
+## My first Next.js project
+
+This is my first Next.js project.  It's a ficticious e-commerce website, where the idea is that the customer has a "Food 3D printer".  You can build, customize, and then finally "print" a meal.
+
+This is an exercise in multiple technologies and web design.
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
