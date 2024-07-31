@@ -10,7 +10,7 @@ const LandingExposition = () => {
             Your <span className={`px-2 text-white ${primarybgAccent}`}>Cravings</span> printed in moments
         </h1>
         <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                  Capture your cravings with a custom food order from your dreams.
+                  Capture your cravings with GoodBytes
         </p>
 
       <ul className="mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start">
