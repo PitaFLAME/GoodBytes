@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, StarHalf } from "lucide-react";
 import { primaryTextAccent, primaryFillAccent } from "./Global"
 
 const Ratings = () => {
@@ -33,7 +33,7 @@ const Ratings = () => {
                       <Star className={`h-4 w-4 ${primaryFillAccent} ${primaryTextAccent}`} />
                       <Star className={`h-4 w-4 ${primaryFillAccent} ${primaryTextAccent}`} />
                       <Star className={`h-4 w-4 ${primaryFillAccent} ${primaryTextAccent}`} />
-                      <Star className={`h-4 w-4 ${primaryFillAccent} ${primaryTextAccent}`} />
+                      <StarHalf className={`h-4 w-4 ${primaryFillAccent} ${primaryTextAccent}`} />
                     </div>
                     <p><span className="font-semibold">2,317</span> happy customers</p>
                   </div>

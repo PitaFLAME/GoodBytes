@@ -7,6 +7,7 @@ import HowItWorks from "@/components/HowItWorks";
 import CustomersSay from "@/components/CustomersSay";
 import { Check, Star } from "lucide-react";
 import Image from "next/image";
+import PrinterImages from "@/components/PrinterImages";
 
 
 export default function Home() {
@@ -27,22 +28,26 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper> 
-      </section>
+      </section>  {/* How it Works Section */}
       <section className="bg-slate-900">
-        <MaxWidthWrapper className="flex flex-col items-center">
+        <MaxWidthWrapper className="flex flex-col items-center pt-16">
           
           <HowItWorks />
 
         </MaxWidthWrapper>
-      </section>
-      <section className="bg-slate-100 py-24">
+      </section> {/* Customers Say Section */}
+      <section className="bg-gradient-to-b from-white to-zinc-300 py-24"> 
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
           
           <CustomersSay />
-
+          
         </MaxWidthWrapper>
-      </section>
+      </section> {/* Animation Section */}
+      <section className="bg-gradient-to-b from-zinc-300 to-zinc-500">
 
+        <PrinterImages />
+        
+      </section>
 
     </div>
   );

@@ -14,7 +14,7 @@ const HowItWorks = () => {
                     transform -translate-x-1/2 w-full xl:bottom-24 lg:bottom-24 md:bottom-20
                     sm:bottom-16 bottom-14 ${primaryTextAccent}`} />
             </div>
-            <img src="/assets/food-3d-printing-3d-printed-food.png" className="order-3 border-4 border-slate-400" />
+            <img src="/assets/food-3d-printing-3d-printed-food.png" className="order-3 border-4 border-slate-700" />
             <div className="order-4 h-px w-4/5 mt-16 bg-slate-500"></div>
             <div className="order-5">
             <p className="text-white sm:text-center lg:text-left mt-5 mb-5 text-xl">
