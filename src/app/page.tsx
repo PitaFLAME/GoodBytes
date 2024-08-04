@@ -5,7 +5,6 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Ratings from "@/components/Ratings";
 import HowItWorks from "@/components/HowItWorks";
 import CustomersSay from "@/components/CustomersSay";
-import { Check, Star } from "lucide-react";
 import Image from "next/image";
 import PrinterImages from "@/components/PrinterImages";
 
