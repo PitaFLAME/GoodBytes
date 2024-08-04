@@ -13,8 +13,8 @@ export const reviews = [
         "OMG, GoodBytes is bussin' frfr 😍 I can't believe how easy it is to get my meals and then print them with my printer thingy. The website is super intuitive ngl and the options are... alot ... 😂 no cap but I love playing around with different ingredients and seeing my creations come to life. It's like a foodie dream. It's so skibidi because I don't have to stress about meal prep ever on god. Everything's ready quick, and it tastes amazaaang. Seriously, if you haven't tried GoodBytes yet, you missing out. ⭐⭐⭐⭐⭐"},
     {name: "Alistair", stars: 5, photo: "", review: 
         "GoodBytes is really something, man. A buddy of mine told me I should check it out since my mom has this toaster thing, and it’s been amazing. Printing food from my desk is like, an art form. The options are so many, and the process is really easy to get. I love being able to create whatever I want whenever I want it."},
-    {name: "Hannah", stars: 5, photo: "", review:
-        ""}
+    //{name: "Hannah", stars: 5, photo: "", review:
+    //    ""}
 
     ];
 

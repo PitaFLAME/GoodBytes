@@ -7,6 +7,7 @@ import HowItWorks from "@/components/HowItWorks";
 import CustomersSay from "@/components/CustomersSay";
 import Image from "next/image";
 import PrinterImages from "@/components/PrinterImages";
+import LandingFooter from "@/components/LandingFooter";
 
 
 export default function Home() {
@@ -46,6 +47,11 @@ export default function Home() {
 
         <PrinterImages />
         
+      </section> {/* Footer Section */}
+      <section>
+
+        <LandingFooter />
+
       </section>
 
     </div>

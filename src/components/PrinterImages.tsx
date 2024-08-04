@@ -27,7 +27,7 @@ const PrinterImages = () => {
     return (
         <>
             <MaxWidthWrapper className="relative max-w-5xl">
-                <div className="flex justify-center h-lvh">
+                <div className="flex justify-center h-[90vh]">
                     <div className="h-[70rem] w-[50rem] absolute bg-gradient-to-b 
                         from-stone-700 to-amber-950 mt-8 rounded-[150px]"
                         style={{ boxShadow: '1px 14px 12px rgba(0, 0, 0, 0.4' }}></div>
