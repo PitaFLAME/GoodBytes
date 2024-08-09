@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react"
-import { primaryTextAccent } from "./Global"
-import { Icons } from "./Icons"
-import { buttonVariants } from "./ui/button"
+import { primaryTextAccent } from "../Global"
+import { Icons } from "../Icons"
+import { buttonVariants } from "../ui/button"
 import Link from "next/link"
 
 const HowItWorks = () => {

@@ -1,5 +1,5 @@
 import { Star } from "lucide-react"
-import { primaryFillAccent, primaryTextAccent } from "./Global"
+import { primaryFillAccent, primaryTextAccent } from "../Global"
 import { getReviews } from "./CustomerReviews"
 import Review from "./Review"
 

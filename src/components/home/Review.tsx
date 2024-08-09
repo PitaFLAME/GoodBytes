@@ -1,7 +1,7 @@
 import { Star } from "lucide-react"
 import { getReview } from "./CustomerReviews"
-import { primaryFillAccent, primaryTextAccent } from "./Global"
-import './css/hidescrollbar.css'
+import { primaryFillAccent, primaryTextAccent } from "../Global"
+import '../css/hidescrollbar.css'
 
 
 interface ReviewProps {

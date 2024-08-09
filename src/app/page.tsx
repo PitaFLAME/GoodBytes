@@ -1,13 +1,13 @@
 import { primaryTextAccent } from "@/components/Global";
 import { Icons } from "@/components/Icons";
-import LandingExposition from "@/components/LandingExposition";
+import LandingExposition from "@/components/home/LandingExposition";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import Ratings from "@/components/Ratings";
-import HowItWorks from "@/components/HowItWorks";
-import CustomersSay from "@/components/CustomersSay";
+import Ratings from "@/components/home/Ratings";
+import HowItWorks from "@/components/home/HowItWorks";
+import CustomersSay from "@/components/home/CustomersSay";
 import Image from "next/image";
-import PrinterImages from "@/components/PrinterImages";
-import LandingFooter from "@/components/LandingFooter";
+import PrinterImages from "@/components/home/PrinterImages";
+import LandingFooter from "@/components/home/LandingFooter";
 
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
-                <img src="/assets/logo.png" className="w-full" alt="logo" />
+                
               </div>
               
               <LandingExposition />

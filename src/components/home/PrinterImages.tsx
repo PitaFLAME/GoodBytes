@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react"
 import { AnimatePresence, motion, useInView } from "framer-motion"
-import MaxWidthWrapper from "./MaxWidthWrapper"
+import MaxWidthWrapper from "../MaxWidthWrapper"
 
 const DISHES = [
     "/assets/dishes/nachos.png",

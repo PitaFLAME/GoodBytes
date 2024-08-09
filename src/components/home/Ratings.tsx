@@ -1,5 +1,5 @@
 import { Star, StarHalf } from "lucide-react";
-import { primaryTextAccent, primaryFillAccent } from "./Global"
+import { primaryTextAccent, primaryFillAccent } from "../Global"
 
 const Ratings = () => {
     return (
