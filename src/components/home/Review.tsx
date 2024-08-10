@@ -14,19 +14,19 @@ export const Review = ({ num }: ReviewProps) => {
 
     return (
         <>
-            <div className="flex flex-auto flex-col lg:pr-8 xl:pr-16 bg-zinc-50 border border-amber-300
-                    rounded-lg max-h-96 relative">
+            <div className="relative flex flex-auto flex-col lg:pr-8 xl:pr-16 bg-zinc-50 border border-amber-300
+                    rounded-lg max-h-96 max-w-[528px] lg:w-[40vw] min-w-[85vw] lg:min-w-0">
 
                 <div className="bg-gradient-to-b from-transparent to-zinc-50 absolute bottom-0 w-full h-10 rounded-b-lg z-20" />
             
 
                 <div className="flex flex-row bg-amber-100 rounded-full p-2 border border-amber-400
-                        mt-4 ml-4">
+                        mt-4 ml-4 mr-8">
                     <img className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100 mr-5"
                         src={review.photo}
                         alt="user-image"/>
                         
-                    <div className="flex flex-col">
+                    <div className="flex flex-col whitespace-normal">
                         <h3 className="">{review.name}</h3>
                         <div className="flex gap-0.5 mb-2">
                             {stars}

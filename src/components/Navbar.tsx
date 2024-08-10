@@ -92,13 +92,15 @@ const Navbar = async () => {
                                 </> )
                                 :
                                 ( <>
-                                    <Link href="/api/auth/register"
+                                    <Hamburger>
+                                        <Link href="/api/auth/register"
                                             className="flex flex-row gap-2 text-white text-xl mb-6
                                                 rounded-lg
                                                 border-2 px-8 py-1 border-zinc-600 bg-zinc-950
                                                 shadow-lg shadow-zinc-950">
                                             <h2 className="underline underline-offset-4">Get Started</h2>
                                         </Link>
+                                    </Hamburger>
                                 </>
                             )
                         }
