@@ -5,7 +5,7 @@ const Ratings = () => {
     return (
 
                   <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-5">
-                  <div className="flex -space-x-4">j
+                  <div className="flex -space-x-4">
                     <img className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
                     src="/assets/users/user-1.png"
                     alt="user-image"
