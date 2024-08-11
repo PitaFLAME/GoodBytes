@@ -1,5 +1,5 @@
 import { Star } from "lucide-react"
-import { getReview } from "./CustomerReviews"
+import { getReview } from "../data/CustomerReviews"
 import { primaryFillAccent, primaryTextAccent } from "../Global"
 import '../css/hidescrollbar.css'
 

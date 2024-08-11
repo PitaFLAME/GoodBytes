@@ -1,28 +1,45 @@
+import { getFavorites } from "@/components/data/CustomerData";
+import Favorites from "@/components/Favorites";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import TileButton from "@/components/TileButton";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
-export default function Home() {
+const Home = async () => {
+    
+    const { getUser } = getKindeServerSession()
+    const user = await getUser()
+    const userEmail = user? user.email : null
+
+
     return (
         <div>
             <MaxWidthWrapper>
-                
-                <h1>Dashboard</h1>
-
-                <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 md:gap-2 sm:gap-4 xs:gap-4">
-
-                    <TileButton title="Sandwiches" image="../../../public/assets/dishes/cheeseburger.png" />
-                    <TileButton title="Sandwiches" image="../../../public/assets/dishes/cheeseburger.png" />
-                    <TileButton title="Sandwiches" image="../../../public/assets/dishes/cheeseburger.png" />
-                    <TileButton title="Sandwiches" image="../../../public/assets/dishes/cheeseburger.png" />
-                    <TileButton title="Sandwiches" image="../../../public/assets/dishes/cheeseburger.png" />
-                    <TileButton title="Sandwiches" image="../../../public/assets/dishes/cheeseburger.png" />
-                    <TileButton title="Sandwiches" image="../../../public/assets/dishes/cheeseburger.png" />
+                <div className="flex w-full h-12 my-4">
+                    <h1 className="">
+                        Dashboard
+                    </h1>
                 </div>
 
-                <img src="../../../public/assets/dishes/cheeseburger.png" />
+                <div className="
+                    shadow-inner shadow-zinc-600 px-2 py-8 rounded-xl bg-stone-100
+                    ">
+                    { userEmail? <Favorites email={userEmail} /> : <></>
+                    }
+                    {/*<TileButton id={0} animDelay={100} />
+                    <TileButton id={1} animDelay={300} />
+                    <TileButton id={2} animDelay={500} />
+                    <TileButton id={3} animDelay={700} />
+                    <TileButton id={4} animDelay={900} />
+                    <TileButton id={5} animDelay={1100} />
+                    <TileButton id={6} animDelay={1300} /> */}
+
+                    
+                </div>
 
             </MaxWidthWrapper>
         </div>
 
     );
 }
+
+export default Home

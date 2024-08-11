@@ -22,7 +22,7 @@ const Navbar = async () => {
                 <div className="flex h-14 items-center justify-between border-b border-zinc-200">
                     <div className="flex flex-row items-center gap-2">
                         <Link href="/" className="flex z-40 font-semibold text-2xl">
-                            <img src="/assets/logo.png" className="h-12 w-12 relative rounded-2xl mt-1 ml-4"/>
+                            <img src="/assets/logo.png" className="h-12 w-12 relative rounded-2xl ml-4"/>
                         </Link>
                         <Link href="/" className="flex z-40 font-semibold text-2xl">
                             good<span className={`${primaryTextAccent}`}>bytes</span>
