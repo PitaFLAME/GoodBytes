@@ -1,6 +1,7 @@
 import { getFavorites } from "@/components/data/CustomerData";
 import Favorites from "@/components/Favorites";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Recents from "@/components/Recents";
 import TileButton from "@/components/TileButton";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
@@ -20,21 +21,13 @@ const Home = async () => {
                     </h1>
                 </div>
 
-                <div className="
-                    shadow-inner shadow-zinc-600 px-2 py-8 rounded-xl bg-stone-100
-                    ">
-                    { userEmail? <Favorites email={userEmail} /> : <></>
-                    }
-                    {/*<TileButton id={0} animDelay={100} />
-                    <TileButton id={1} animDelay={300} />
-                    <TileButton id={2} animDelay={500} />
-                    <TileButton id={3} animDelay={700} />
-                    <TileButton id={4} animDelay={900} />
-                    <TileButton id={5} animDelay={1100} />
-                    <TileButton id={6} animDelay={1300} /> */}
-
-                    
+                <div className="shadow-inner shadow-zinc-600 px-2 py-8 rounded-xl bg-stone-100">
+                    { userEmail? <Favorites email={userEmail} /> : <></> }
                 </div>
+                <div className="shadow-inner shadow-zinc-600 px-2 py-8 mt-8 rounded-xl bg-stone-100">
+                    { userEmail? <Recents email={userEmail} /> : <></> }
+                </div>
+                
 
             </MaxWidthWrapper>
         </div>

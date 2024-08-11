@@ -1,16 +1,16 @@
 'use client'
 
 import { ChevronDown, ChevronRight } from "lucide-react";
-import { getFavorites } from "./data/CustomerData"
+import { getFavorites, getRecents } from "./data/CustomerData"
 import TileButton from "./TileButton"
 import React from "react";
 
 
-const Favorites = ({ email }: {
+const Recents = ({ email }: {
     email: string;
 }) => {
-    const favs = email? getFavorites(email) : []
-    const delays = favs.map((_, index) => index * 300)
+    const recents = email? getRecents(email) : []
+    const delays = recents.map((_, index) => index * 300)
 
     const [isExpanded, toggleExpandible] = React.useState(false)
     const openExpandible = () => { toggleExpandible(!isExpanded) }
@@ -19,7 +19,7 @@ const Favorites = ({ email }: {
         <div className="flex flex-col">
             <div className="flex flex-row justify-center items-center py-4 -mt-4">
                 <h1 className="text-stone-800 font-extrabold text-4xl ml-8">
-                    Favorites
+                    Recents
                 </h1>
                 { isExpanded ?
                     <ChevronDown className="text-color-800 h-8 w-8 ml-auto mr-8" /> :
@@ -33,7 +33,7 @@ const Favorites = ({ email }: {
  
             <div className={`grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 md:gap-2 gap-4 mx-4
                 ${isExpanded ? '' : 'hidden'}`}>
-                {favs.map((itemID, index) => (
+                {recents.map((itemID, index) => (
                     <TileButton id={itemID} animDelay={delays[index]} key={index} />
                 ))}
             </div>
@@ -41,4 +41,4 @@ const Favorites = ({ email }: {
     )
 }
 
-export default Favorites
+export default Recents

@@ -10,3 +10,7 @@ export const getFavorites = (email: string) => {
     return favs ? favs : [];
 }
 
+export const getRecents = (email: string) => { 
+    const recents = customerData.find(cust => cust.email === email)?.recents;
+    return recents ? recents : [];
+}
