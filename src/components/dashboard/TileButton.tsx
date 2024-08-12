@@ -1,9 +1,9 @@
 'use client'
 
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Heart } from "lucide-react";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { buildImagePaths, getFood } from "./data/Foods";
+import { buildImagePaths, getFood } from "../data/Foods";
 
 
 const TileButton = ({ id, animDelay }: {
@@ -14,6 +14,9 @@ const TileButton = ({ id, animDelay }: {
     const foodInfo = getFood(id);
     const imagePaths = buildImagePaths(id);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const [isFavorited, toggleFavorite] = React.useState(true)
+    const setFavorite = () => { toggleFavorite(!isFavorited) }
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -31,14 +34,11 @@ const TileButton = ({ id, animDelay }: {
     
 
     return (
-        <>
+        <div className="relative">
             <Link href="">
                 <div className="flex group relative w-full h-[18vh] bg-zinc-300  
                     border-2 border-zinc-200 rounded-lg overflow-hidden items-center
                     ">
-
-                    {/*<img src={imagePaths[0]} className="object-cover w-full h-full
-                        transition-transform duration-200 transform group-hover:scale-105" /> */}
 
                     {imagePaths.map((path, index) => (
                         <img
@@ -52,10 +52,13 @@ const TileButton = ({ id, animDelay }: {
                         />
                     ))}
 
-                    <div className="absolute w-full h-full hidden group-hover:block">
+                    <div className="relative w-full h-full hidden group-hover:block">
 
                         <div className="absolute w-full h-24 bottom-0
                             bg-gradient-to-b from-transparent to-zinc-900 opacity-60" />
+                        
+                        
+
 
                         <div className="flex flex-row absolute text-zinc-100 items-center justify-end
                             w-full bottom-2 z-10 gap-2">
@@ -73,7 +76,21 @@ const TileButton = ({ id, animDelay }: {
 
                 </div>
             </Link>
-        </>
+
+            <div className="absolute right-0 top-2 z-40">
+                { isFavorited ?
+                    <Heart className="h-8 w-8 text-zinc-100 fill-transparent mr-4 mt-1" /> :
+                    <Heart className="h-8 w-8 text-pink-400 fill-transparent mr-4 mt-1" />
+                    
+                }
+                <input type="checkbox" className="absolute h-8 w-8 right-4 top-1 cursor-default 
+                    z-30 opacity-0"
+                    checked={isFavorited}
+                    onChange={setFavorite} 
+                />
+            </div>
+
+        </div>
     );
 }
 

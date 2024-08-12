@@ -1,9 +1,9 @@
 import Link  from "next/link"
-import MaxWidthWrapper from "./MaxWidthWrapper"
-import { Button, buttonVariants } from "./ui/button"
+import MaxWidthWrapper from "../MaxWidthWrapper"
+import { Button, buttonVariants } from "../ui/button"
 import { AlignJustify, ArrowRight, CookingPot, UserRound } from "lucide-react"
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
-import { primaryTextAccent } from "./Global"
+import { primaryTextAccent } from "../Global"
 import React from "react"
 import Hamburger from "./Hamburger"
 

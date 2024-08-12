@@ -1,9 +1,11 @@
 import { getFavorites } from "@/components/data/CustomerData";
-import Favorites from "@/components/Favorites";
+import Favorites from "@/components/dashboard/Favorites";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import Recents from "@/components/Recents";
-import TileButton from "@/components/TileButton";
+import Recents from "@/components/dashboard/Recents";
+import Suggested from "@/components/dashboard/Suggested";
+import TileButton from "@/components/dashboard/TileButton";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { getSuggested } from "@/components/data/Foods";
 
 const Home = async () => {
     
@@ -26,6 +28,9 @@ const Home = async () => {
                 </div>
                 <div className="shadow-inner shadow-zinc-600 px-2 py-8 mt-8 rounded-xl bg-stone-100">
                     { userEmail? <Recents email={userEmail} /> : <></> }
+                </div>
+                <div className="shadow-inner shadow-zinc-600 px-2 py-8 mt-8 rounded-xl bg-stone-100">
+                    <Suggested suggesteds={getSuggested(12)} />
                 </div>
                 
 

@@ -15,17 +15,17 @@ export const foods = [
     {/* 13 */ name: "Cakes", image: "cake" },
     {/* 14 */ name: "Pancakes", image: "pancakes" },
     {/* 15 */ name: "Waffles", image: "waffles" },
-    {/* 16 */ name: "Donuts", image: "donuts" },
+    {/* 16 */ name: "Donuts", image: "donut" },
     {/* 17 */ name: "Cookies", image: "cookies" },
-    {/* 18 */ name: "Burgers", image: "burgers" },
-    {/* 19 */ name: "Hot Dogs", image: "hotdogs" },
+    {/* 18 */ name: "Burgers", image: "burger" },
+    {/* 19 */ name: "Hot Dogs", image: "hotdog" },
     {/* 20 */ name: "Fries", image: "fries" },
     {/* 21 */ name: "Onion Rings", image: "onionrings" },
     {/* 22 */ name: "Fried Chicken", image: "friedchicken" },
     {/* 23 */ name: "Fish", image: "fish" },
     {/* 24 */ name: "Nachos", image: "nachos" },
     {/* 25 */ name: "Curry", image: "curry" },
-    {/* 26 */ name: "Burritos", image: "burritos" },
+    {/* 26 */ name: "Burritos", image: "burrito" },
 
 
 ];
@@ -43,4 +43,15 @@ export const buildImagePaths = (num: number) => {
             "/assets/marketing-images/" + foods[num].image + "/" + foods[num].image + "3.png",
         ].sort(() => Math.random() - 0.5)
     )
+}
+
+export const getSuggested = (num: number) => {
+    const suggestedIds: number[] = [];
+    while (suggestedIds.length < num) {
+        const randomId = Math.floor(Math.random() * foods.length);
+        if (!suggestedIds.includes(randomId)) {
+            suggestedIds.push(randomId);
+        }
+    }
+    return suggestedIds;
 }
