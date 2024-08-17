@@ -1,4 +1,14 @@
+export const getFavorites = async (email: string) => {
+    const response = await fetch(`../../api/customer?email=${email}&type=favorites`);
+    const data = await response.json();
+    return data.data;
+};
 
+export const getRecents = async (email: string) => {
+    const response = await fetch(`../../api/customer?email=${email}&type=recents`);
+    const data = await response.json();
+    return data.data;
+};
 
 
 
@@ -7,14 +17,3 @@ const customerData = [
 
 
 ]
-
-
-export const getFavorites = (email: string) => { 
-    const favs = customerData.find(cust => cust.email === email)?.favorites;
-    return favs ? favs : [];
-}
-
-export const getRecents = (email: string) => { 
-    const recents = customerData.find(cust => cust.email === email)?.recents;
-    return recents ? recents : [];
-}

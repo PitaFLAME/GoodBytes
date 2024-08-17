@@ -3,17 +3,27 @@
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { getFavorites, getRecents } from "../data/CustomerData"
 import TileButton from "./TileButton"
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 
 const Recents = ({ email }: {
     email: string;
 }) => {
-    const recents = email? getRecents(email) : []
+    const [recents, setRecents] = useState<number[]>([]);
     const delays = recents.map((_, index) => index * 300)
 
     const [isExpanded, toggleExpandible] = React.useState(false)
     const openExpandible = () => { toggleExpandible(!isExpanded) }
+
+    useEffect(() => {
+        const fetchFavorites = async () => {
+            if (email) {
+                const favorites = await getRecents(email);
+                setRecents(favorites);
+            }
+        };
+        fetchFavorites();
+    }, [email]);
 
     return (
         <div className="flex flex-col">
